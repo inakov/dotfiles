@@ -3,7 +3,7 @@ let mapleader=' '
 set ignorecase
 set smartcase
 set scrolloff=3
-
+set surround
 set clipboard=unnamedplus,unnamed
 
 nnoremap gd :action GotoDeclaration<CR>
