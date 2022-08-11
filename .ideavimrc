@@ -1,0 +1,90 @@
+let mapleader=' '
+
+set ignorecase
+set smartcase
+set scrolloff=3
+set surround
+set clipboard=unnamedplus,unnamed
+
+"nnoremap gd :action GotoDeclaration<CR>
+"nnoremap gi :action GotoImplementation<CR>
+nnoremap fu :action FindUsages<CR>
+nnoremap <Leader>fu :action FindUsages<CR>
+nnoremap <Leader>su :action ShowUsages<CR>
+
+" key bindings for quickly moving between windows
+" h left, l right, k up, j down
+nmap <leader>h <c-w>h
+nmap <leader>l <c-w>l
+nmap <leader>k <c-w>k
+nmap <leader>j <c-w>j
+
+nmap <C-C>h <c-w>h
+nmap <C-C>l <c-w>l
+nmap <C-C>k <c-w>k
+nmap <C-C>j <c-w>j
+
+" Insert mode shortcut
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-d> <Delete>
+
+" Move to the start of line
+nnoremap H ^
+
+" Move to the end of line
+nnoremap L $
+
+" Redo
+" nnoremap U <C-r>
+
+" Yank to the end of line
+nnoremap Y y$
+
+"nnoremap <Leader>gd :action GotoDeclaration<CR>
+"nnoremap <Leader>gi :action GotoImplementation<CR>
+"nnoremap <Leader>gt :action GotoTest<CR>
+"nnoremap <Leader>ga :action GotoAction<CR>
+"nnoremap <Leader>gc :action GotoClass<CR>
+"nnoremap <Leader>gf :action GotoFile<CR>
+"nnoremap <Leader>gs :action GotoSymbol<CR>
+
+"nnoremap <Leader>fp :action ShowFilePath<CR>
+
+nnoremap <Leader>i :action OptimizeImports<CR>
+
+nnoremap <Leader>pm :action ShowPopupMenu<CR>
+
+nnoremap <Leader>rc :action ChooseRunConfiguration<CR>
+nnoremap <Leader>re :action RenameElement<CR>
+nnoremap <Leader>rf :action RenameFile<CR>
+
+"nnoremap <Leader>se :action SearchEverywhere<CR>
+nnoremap <Leader>tc :action CloseActiveTab<CR>
+
+nnoremap <Leader>e :action SearchEverywhere<CR>
+nnoremap <Leader>g :action FindInPath<CR>
+nnoremap <Leader>s :action FileStructurePopup<CR>
+
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gb :action JumpToLastChange<CR>
+
+nnoremap U :action ShowUsages<CR>
+nnoremap R :action RenameElement<CR>
+
+nnoremap == :action ReformatCode<CR>
+vnoremap == :action ReformatCode<CR>
+
+nnoremap cc :action CommentByLineComment<CR>
+vnoremap cc :action CommentByLineComment<CR>
+
+nnoremap <C-CR> :action ShowIntentionActions<CR>
+
+nmap <leader>l :action KJumpAction.Line<cr>
+nmap <leader>w :action KJumpAction.Word0<cr>
