@@ -1,0 +1,9 @@
+{
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
+    "prettier.printWidth": 120,
+    "prettier.arrowParens": "avoid",
+    "prettier.semi": true,
+    "typescript.preferences.quoteStyle": "single"
+}
