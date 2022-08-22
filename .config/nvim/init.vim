@@ -50,12 +50,6 @@ nnoremap bs :buffers<CR>
 " MacVim use clipboard contents
 set clipboard=unnamed
 
-" Remove newbie crutches in Command Mode
-cnoremap <Down> <Nop>
-cnoremap <Left> <Nop>
-cnoremap <Right> <Nop>
-cnoremap <Up> <Nop>
-
 " Remove newbie crutches in Insert Mode
 imap <Down> <Nop>
 imap <Left> <Nop>
@@ -113,7 +107,7 @@ syntax enable
 nnoremap <silent><F5> :source ~/.config/nvim/init.vim \| :PlugInstall<CR>
 
 " Coc setup
-let g:coc_global_extensions = ['coc-tsserver', 'coc-emmet', 'coc-git', 'coc-lists', 'coc-snippets', 'coc-html', 'coc-tsserver', 'coc-jest', 'coc-eslint',
+let g:coc_global_extensions = ['coc-tsserver', 'coc-emmet', 'coc-git', 'coc-lists', 'coc-snippets', 'coc-html', 'coc-jest', 'coc-eslint',
             \ 'coc-css', 'coc-json', 'coc-prettier', 'coc-explorer', 'coc-sql']
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
@@ -169,11 +163,11 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap keys for applying codeAction to the current line.
-nmap <space>c  <Plug>(coc-codeaction)
+nmap <leader>c  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <space>qf  <Plug>(coc-fix-current)
+nmap <leader>qf  <Plug>(coc-fix-current)
 
-:nmap <space>e :CocCommand explorer<CR>
+"nmap <space>e :CocCommand explorer<CR>
 
 " Run the Code Lens action on the current line.
 nmap <leader>l  <Plug>(coc-codelens-action)
@@ -199,11 +193,6 @@ omap ic <Plug>(coc-classobj-i)
 
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
-
-" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <space>l  <Plug>(coc-codeaction-selected)
-" Remap for do codeAction of current line
-nmap <space>l  <Plug>(coc-codeaction)
 
 nnoremap <silent> <space>1 :call CocAction('runCommand', 'eslint.executeAutofix')<CR>
 
@@ -288,9 +277,9 @@ Plug 'airblade/vim-gitgutter'
 
 " Language Support
 " 1. JavaScript
-" Plug 'pangloss/vim-javascript'    " JavaScript support
-" Plug 'leafgarland/typescript-vim' " TypeScript syntax
-" Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 " Plug 'jparise/vim-graphql'        " GraphQL syntax
 
 " 2. HTML
@@ -309,6 +298,9 @@ Plug 'hail2u/vim-css3-syntax',  { 'for': 'css' }
 " Plug 'fatih/vim-go'
 " Plug 'nsf/gocode',  { 'rtp': 'nvim', 'do': './nvim/symlink.sh' }
 " Plug 'zchee/deoplete-go'
+
+" 6. Kotlin
+Plug 'udalov/kotlin-vim'
 
 " Markdown
 Plug 'reedes/vim-pencil'    " Markdown, Writing
