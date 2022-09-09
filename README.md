@@ -14,7 +14,7 @@ set git status to hide untracked files
 
 add the alias to .bashrc (or .zshrc) so you can use it later
 
-echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.zshrc
+`echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.zshrc`
 
 ## Usage
 
