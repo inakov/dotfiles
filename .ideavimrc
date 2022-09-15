@@ -1,90 +1,192 @@
-let mapleader=' '
+let mapleader=";"
+nnoremap <c-;> ;
 
-set ignorecase
-set smartcase
-set scrolloff=3
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+" Plugins
+set easymotion
+set commentary
 set surround
-set clipboard=unnamedplus,unnamed
+set NERDTree
+set argtextobj
+set multiple-cursors
 
-"nnoremap gd :action GotoDeclaration<CR>
-"nnoremap gi :action GotoImplementation<CR>
-nnoremap fu :action FindUsages<CR>
-nnoremap <Leader>fu :action FindUsages<CR>
-nnoremap <Leader>su :action ShowUsages<CR>
+" General settings
+set ideajoin
+set scrolloff=7
+set clipboard+=unnamed
+set clipboard+=ideaput
+set smarttab
 
-" key bindings for quickly moving between windows
-" h left, l right, k up, j down
-nmap <leader>h <c-w>h
-nmap <leader>l <c-w>l
-nmap <leader>k <c-w>k
-nmap <leader>j <c-w>j
+"Enable relative line numbering
+set number relativenumber
 
-nmap <C-C>h <c-w>h
-nmap <C-C>l <c-w>l
-nmap <C-C>k <c-w>k
-nmap <C-C>j <c-w>j
+" Shows what mode Vim is in at the bottom of intellij
+set showmode
+
+" Stay in the mode in which the editing started
+set idearefactormode=keep
+
+" Always show current position
+set ruler
+
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases
+set smartcase
+
+" Makes search act like search in modern browsers
+set incsearch
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+" For regular expressions turn magic on
+set magic
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+" No annoying sound on errors
+set visualbell
+set t_vb=
+set tm=500
+
+" Windows
+" Exit in and out of insert mode easily
+imap jk <Esc>
+
+" Shortcutting split navigation
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-f> <c-w>o
+
+nnoremap <leader>e :action RecentLocations<CR>
+"nnoremap <leader>l  :action LocalHistory.ShowHistory<CR>
+
+" Tab navigation
+nnoremap <a-l> :action NextTab<CR>
+nnoremap <a-h> :action PreviousTab<CR>
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+
+" Focus project window
+nnoremap <c-n> :NERDTreeFocus<CR>
+
+" Tool windows
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+
+nnoremap <c-x> :action HideAllWindows<CR>
+
+" Navigate through method signatures
+map [[ <Action>(MethodUp)
+map ]] <Action>(MethodDown)
+
+" Editor Mappings
+
+" Remap VIM 0 to first non-blank character
+map 0 ^
 
 " Insert mode shortcut
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
-inoremap <C-a> <Home>
-inoremap <C-e> <End>
-inoremap <C-d> <Delete>
+inoremap <c-h> <Left>
+inoremap <c-j> <Down>
+inoremap <c-k> <Up>
+inoremap <c-l> <Right>
+inoremap <c-a> <Home>
+inoremap <c-e> <End>
+inoremap <c-d> <Delete>
 
-" Move to the start of line
-nnoremap H ^
+""" Searching and Source Code Navigation
+nnoremap <c-o> :action Back<CR>
+nnoremap <c-i> :action Forward<CR>
 
-" Move to the end of line
-nnoremap L $
+nnoremap <space>b :action ShowNavBar<CR>
+nnoremap <space>a :action GotoAction<CR>
+nnoremap <space>s :action GotoSymbol<CR>
 
-" Redo
-" nnoremap U <C-r>
+nnoremap <leader>s :action FileStructurePopup<CR>
+nnoremap <leader>S :action GotoRelated<CR>
+nnoremap <c-s> :action CallHierarchy<CR>
 
-" Yank to the end of line
-nnoremap Y y$
-
-"nnoremap <Leader>gd :action GotoDeclaration<CR>
-"nnoremap <Leader>gi :action GotoImplementation<CR>
-"nnoremap <Leader>gt :action GotoTest<CR>
-"nnoremap <Leader>ga :action GotoAction<CR>
-"nnoremap <Leader>gc :action GotoClass<CR>
-"nnoremap <Leader>gf :action GotoFile<CR>
-"nnoremap <Leader>gs :action GotoSymbol<CR>
-
-"nnoremap <Leader>fp :action ShowFilePath<CR>
-
-nnoremap <Leader>i :action OptimizeImports<CR>
-
-nnoremap <Leader>pm :action ShowPopupMenu<CR>
-
-nnoremap <Leader>rc :action ChooseRunConfiguration<CR>
-nnoremap <Leader>re :action RenameElement<CR>
-nnoremap <Leader>rf :action RenameFile<CR>
-
-"nnoremap <Leader>se :action SearchEverywhere<CR>
-nnoremap <Leader>tc :action CloseActiveTab<CR>
-
-nnoremap <Leader>e :action SearchEverywhere<CR>
-nnoremap <Leader>g :action FindInPath<CR>
-nnoremap <Leader>s :action FileStructurePopup<CR>
-
-nnoremap gd :action GotoDeclaration<CR>
 nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
-nnoremap gb :action JumpToLastChange<CR>
+nnoremap gt :action GotoTest<CR>
+nnoremap ]e :action GotoNextError<CR>
+nnoremap [e :action GotoPreviousError<CR>
+nnoremap ff :action SearchEverywhere<CR>
 
 nnoremap U :action ShowUsages<CR>
-nnoremap R :action RenameElement<CR>
+nnoremap T :action GotoTypeDeclaration<CR>
+nnoremap K :action QuickJavaDoc<CR>
+nnoremap <leader>r :action RenameElement<CR>
+nnoremap <leader>R :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>c :action CloseAllEditorsButActive<CR>
+nnoremap <leader>q :action CloseEditor<CR>
+nnoremap <space><space> :action ShowErrorDescription<CR>
 
 nnoremap == :action ReformatCode<CR>
 vnoremap == :action ReformatCode<CR>
 
-nnoremap cc :action CommentByLineComment<CR>
-vnoremap cc :action CommentByLineComment<CR>
+nnoremap <space>i :action OptimizeImports<CR>
+nnoremap <space>o :action Javascript.Linters.EsLint.Fix<CR>
 
-nnoremap <C-CR> :action ShowIntentionActions<CR>
+nnoremap <c-CR> :action ShowIntentionActions<CR>
 
-nmap <leader>l :action KJumpAction.Line<cr>
-nmap <leader>w :action KJumpAction.Word0<cr>
+" Git
+nnoremap <leader>h :action VcsShowCurrentChangeMarker<CR>
+nnoremap <leader>x :action Vcs.RollbackChangedLines<CR>
+nnoremap ]c :action VcsShowNextChangeMarker<CR>
+nnoremap [c :action VcsShowPrevChangeMarker<CR>
+nnoremap gm :action Git.CompareWithBranch<CR>
+
+nnoremap gbl :action Annotate<CR>
+nnoremap gba :action Git.Branches<CR>
+nnoremap gcb :action Git.CreateNewBranch<CR>
+nnoremap grb :action Git.Rebase<CR>
+nnoremap gra :action Git.Rebase.Abort<CR>
+nnoremap grc :action Git.Rebase.Continue<CR>
+nnoremap gpl :action Vcs.UpdateProject<CR>
+nnoremap gps :action Vcs.Push<CR>
+
+" Fold
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap <leader>zc :action CollapseAllRegions<CR>
+nnoremap <leader>zo :action ExpandAllRegions<CR>
+
+" Run mappings
+nnoremap ,u :action Rerun<CR>
+nnoremap ,r :action RunClass<CR>
+nnoremap ,d :action DebugClass<CR>
+
+""" Running and Debugging
+nnoremap ,r :action ContextRun<CR>
+nnoremap ,R :action Run<CR>
+nnoremap ,a :action RunClass<CR>
+nnoremap ,c :action ChooseRunConfiguration<CR>
+nnoremap ,t :action ActivateServicesToolWindow<CR>
+nnoremap ,u :action Rerun<CR>
+nnoremap ,f :action RerunFailedTests<CR>
+
+nnoremap ,b :action ToggleLineBreakpoint<CR>
+nnoremap ,d :action ContextDebug<CR>
+nnoremap ,D :action Debug<CR>
+nnoremap ,n :action ActivateDebugToolWindow<CR>
+nnoremap ,s :action Stop<CR>
+
+" EasyMotion
+map <leader>j <Plug>(easymotion-f)
+map <leader>J <Plug>(easymotion-s)
+
+" Fix multiple-cursors mappings for mac
+map <leader>n <a-n>
+map <leader>N <a-p>
+map <leader>d <a-x>
