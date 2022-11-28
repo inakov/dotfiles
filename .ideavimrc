@@ -1,12 +1,10 @@
 let mapleader=";"
-nnoremap <c-;> ;
 
 nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 
 " Plugins
 set easymotion
-set commentary
 set surround
 set NERDTree
 set argtextobj
@@ -17,6 +15,9 @@ set ideajoin
 set scrolloff=7
 set clipboard+=unnamed
 set clipboard+=ideaput
+
+set autoindent
+
 set smarttab
 
 "Enable relative line numbering
@@ -65,16 +66,19 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-f> <c-w>o
 
+" Editor Mappings
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <c-=> :action Unsplit<CR>
+
 nnoremap <leader>e :action RecentLocations<CR>
 "nnoremap <leader>l  :action LocalHistory.ShowHistory<CR>
 
 " Tab navigation
 nnoremap <a-l> :action NextTab<CR>
 nnoremap <a-h> :action PreviousTab<CR>
-nnoremap <c-\> :action SplitVertically<CR>
-nnoremap <c--> :action SplitHorizontally<CR>
-nnoremap <c-=> :action Unsplit<CR>
-nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+
 
 " Focus project window
 nnoremap <c-n> :NERDTreeFocus<CR>
@@ -89,10 +93,12 @@ nnoremap <c-x> :action HideAllWindows<CR>
 map [[ <Action>(MethodUp)
 map ]] <Action>(MethodDown)
 
-" Editor Mappings
-
 " Remap VIM 0 to first non-blank character
 map 0 ^
+
+" Comment
+nnoremap gcc :action CommentByLineComment<CR>
+vnoremap gcc :action CommentByLineComment<CR>
 
 " Insert mode shortcut
 inoremap <c-h> <Left>
@@ -162,12 +168,7 @@ nnoremap zo :action ExpandRegion<CR>
 nnoremap <leader>zc :action CollapseAllRegions<CR>
 nnoremap <leader>zo :action ExpandAllRegions<CR>
 
-" Run mappings
-nnoremap ,u :action Rerun<CR>
-nnoremap ,r :action RunClass<CR>
-nnoremap ,d :action DebugClass<CR>
-
-""" Running and Debugging
+" Running and Debugging
 nnoremap ,r :action ContextRun<CR>
 nnoremap ,R :action Run<CR>
 nnoremap ,a :action RunClass<CR>
