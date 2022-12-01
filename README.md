@@ -44,5 +44,5 @@ git clone https://github.com/zsh-users/zsh-completions.git ~/.zsh/zsh-completion
 ```
 
 ```
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-completions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 ```
