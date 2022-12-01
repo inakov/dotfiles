@@ -1,0 +1,17 @@
+# ~/.config/starship.toml
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Change command timeout from 500 to 1000 ms
+command_timeout = 1000
+
+[nodejs]
+format = "via [ $version](bold green) "
+
+[gcloud]
+symbol = " "
+format = "[$symbol$active]($style) "
+
+[git_branch]
+style = "bold green"
