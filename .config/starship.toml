@@ -12,6 +12,7 @@ format = "via [ $version](bold green) "
 [gcloud]
 symbol = " "
 format = "[$symbol$active]($style) "
+disabled = true
 
 [git_branch]
 style = "bold green"
