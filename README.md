@@ -32,3 +32,17 @@ Clone the repository repository `git clone --bare git@github.com:inakov/dotfiles
 define the alias in the current shell scope `alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
 
 checkout `dotfiles checkout`
+
+Install zsh plugins
+
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+```
+
+```
+git clone https://github.com/zsh-users/zsh-completions.git ~/.zsh/zsh-completions
+```
+
+```
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-completions
+```
