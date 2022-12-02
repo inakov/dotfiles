@@ -46,3 +46,18 @@ git clone https://github.com/zsh-users/zsh-completions.git ~/.zsh/zsh-completion
 ```
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 ```
+
+Install nerd fonts with
+
+```
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+```
+
+Install starship with
+
+```
+curl -sS https://starship.rs/install.sh | sh
+```
+
+Download and install [Warp](https://www.warp.dev) terminal.
