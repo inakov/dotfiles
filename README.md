@@ -61,3 +61,7 @@ curl -sS https://starship.rs/install.sh | sh
 ```
 
 Download and install [Warp](https://www.warp.dev) terminal.
+
+1. Pick your favorit theme - Thedigitallifeis
+2. Set font to `Hack Nerd Font`
+3. Enable `Honor user's custom prompt (PS1)` feature from settings
