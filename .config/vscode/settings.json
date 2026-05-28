@@ -1,0 +1,347 @@
+{
+  "window.commandCenter": true,
+  "editor.fontSize": 14,
+  "vim.handleKeys": {
+    "<C-n>": false
+  },
+  "vim.leader": ";",
+  "editor.lineNumbers": "relative",
+  "vim.useSystemClipboard": true,
+  "vim.smartcase": true,
+  "vim.ignorecase": true,
+  "vim.incsearch": true,
+  "vim.matchpairs": "(:),{:},[:],<:>",
+  "nerdtree.hideSidebarWhenOpenFile": false,
+  "nerdtree.alwaysShowSidebar": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "0"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    {
+      "before": [
+        "<space>",
+        "i"
+      ],
+      "commands": [
+        "editor.action.organizeImports"
+      ]
+    },
+    {
+      "before": [
+        "<space>",
+        "o"
+      ],
+      "commands": [
+        "eslint.executeAutofix"
+      ]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "<c-h>"
+      ],
+      "after": [
+        "<Left>"
+      ]
+    },
+    {
+      "before": [
+        "<c-j>"
+      ],
+      "after": [
+        "<Down>"
+      ]
+    },
+    {
+      "before": [
+        "<c-k>"
+      ],
+      "after": [
+        "<Up>"
+      ]
+    },
+    {
+      "before": [
+        "<c-l>"
+      ],
+      "after": [
+        "<Right>"
+      ]
+    },
+    {
+      "before": [
+        "<c-a>"
+      ],
+      "after": [
+        "<Home>"
+      ]
+    },
+    {
+      "before": [
+        "<c-e>"
+      ],
+      "after": [
+        "<End>"
+      ]
+    },
+    {
+      "before": [
+        "<c-d>"
+      ],
+      "after": [
+        "<Delete>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "gcc"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "s"
+      ],
+      "commands": [
+        "editor.action.goToTypeDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "i"
+      ],
+      "commands": [
+        "editor.action.goToImplementation"
+      ]
+    },
+    {
+      "before": [
+        "]",
+        "e"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ]
+    },
+    {
+      "before": [
+        "[",
+        "e"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ]
+    },
+    {
+      "before": [
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "U"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    },
+    {
+      "before": [
+        "T"
+      ],
+      "commands": [
+        "editor.action.goToTypeDefinition"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "R"
+      ],
+      "commands": [
+        "editor.action.refactor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.closeOtherEditors"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    {
+      "before": [
+        "=",
+        "="
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "commands": [
+        "editor.action.dirtydiff.next"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "x"
+      ],
+      "commands": [
+        "git.revertSelectedRanges"
+      ]
+    },
+    {
+      "before": [
+        "]",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.editor.nextChange"
+      ]
+    },
+    {
+      "before": [
+        "[",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.editor.previousChange"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "b",
+        "l"
+      ],
+      "commands": [
+        "gitlens.toggleBlame"
+      ]
+    },
+    {
+      "before": [
+        "z",
+        "c"
+      ],
+      "commands": [
+        "editor.fold"
+      ]
+    },
+    {
+      "before": [
+        "z",
+        "o"
+      ],
+      "commands": [
+        "editor.unfold"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "z",
+        "c"
+      ],
+      "commands": [
+        "editor.foldAll"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "z",
+        "o"
+      ],
+      "commands": [
+        "editor.unfoldAll"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "gcc"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    },
+    {
+      "before": [
+        "=",
+        "="
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    }
+  ]
+}

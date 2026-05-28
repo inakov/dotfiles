@@ -222,6 +222,7 @@ let g:ctrlsf_auto_focus = {
 
 noremap <leader>w :CtrlSF<space>
 noremap <space>w :CtrlSFOpen<CR><space>
+nnoremap R :CtrlSF <C-R><C-W> -R -W<CR>
 
 " Git
 nnoremap gM :Gvsplit origin/master:%<cr>
@@ -313,7 +314,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Theme
-set termguicolors
+" set termguicolors
 colorscheme gruvbox
 set background=dark
 

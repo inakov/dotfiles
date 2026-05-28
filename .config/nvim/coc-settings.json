@@ -5,5 +5,6 @@
     "prettier.printWidth": 120,
     "prettier.arrowParens": "avoid",
     "prettier.semi": true,
-    "typescript.preferences.quoteStyle": "single"
+    "typescript.preferences.quoteStyle": "single",
+    "snippets.ultisnips.pythonPrompt": false
 }
